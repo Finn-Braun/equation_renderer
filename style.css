@@ -1,0 +1,55 @@
+html, body {
+  background-color: #282c35;
+  color: #ef6b4d;
+  margin: 0;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+}
+
+#title {
+  margin: 0;
+  font-size: 5rem;
+}
+
+#header {
+  height: 100px;
+  width: auto;
+}
+
+#input {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 35%;
+  left: 10%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#typed_math {
+  border: none;
+  color:#ef6b4d;
+  outline: none;
+  text-align: center;
+  width: 90%;
+}
+
+#typed_math, #rendered_math {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-family: 'Space Mono', monospace;
+}
+
+#equation {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 35%;
+  right: 10%;
+  background-color: white;
+  border-radius: 20px;
+}
