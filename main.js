@@ -11,7 +11,7 @@ function updateValue() {
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let interval = null;
 

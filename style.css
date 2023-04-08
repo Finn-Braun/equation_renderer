@@ -16,46 +16,62 @@ html, body {
   width: auto;
 }
 
+#interface {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
 #input {
-  position: absolute;
-  top: 30%;
-  height: 50%;
+  display: flex;
   width: 35%;
-  left: 10%;
-  background-color: #FFFFFF;
+  aspect-ratio: 5 / 4;
+  background-color: #27292B;
   border-radius: 20px;
-  box-shadow: 20px, 20px, 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#equation {
+  display: flex;
+  width: 35%;
+  aspect-ratio: 5 / 4;
+  background-color: #27292B;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 #typed_math {
   border: none;
   color:#73BFB7;
+  background-color: #27292B;
   outline: none;
-  text-align: center;
   width: 90%;
+  text-align: center;
 }
 
 #rendered_math {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 #typed_math, #rendered_math {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 2rem;
   font-family: 'Space Mono', monospace;
 }
 
-#equation {
-  position: absolute;
-  top: 30%;
-  height: 50%;
-  width: 35%;
-  right: 10%;
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 20px, 20px, 20px;
+@media screen and (max-width: 700px) {
+  #equation, #input {
+    width: 80%;
+  }
+  #title {
+    font-size: 2rem;
+  }
+  #header {
+    height: 30px;
+  }
 }
