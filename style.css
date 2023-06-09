@@ -1,5 +1,5 @@
 html, body {
-  background-color:#33373D;
+  background-color:#111111;
   color: #DF756A;
   margin: 0;
   text-align: center;
@@ -26,41 +26,52 @@ html, body {
 }
 
 #input {
+  z-index: 1;
   display: flex;
   width: 35%;
-  aspect-ratio: 5 / 4;
-  background-color: #27292B;
-  border-radius: 20px;
+  height: 600px;
+  background-color: #111111;
+  border-radius: 20px 10px 10px 20px;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 4px;
+  box-shadow: 10px 10px 50px black
 }
 
 #equation {
+  z-index: 1;
   display: flex;
   width: 35%;
-  aspect-ratio: 5 / 4;
-  background-color: #27292B;
-  border-radius: 20px;
+  height: 600px;
+  background-color: #111111;
+  border-radius: 10px 20px 20px 10px;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 4px;
+  box-shadow: 10px 10px 50px black
 }
 
 #typed_math {
-  border: none;
-  color:#73BFB7;
-  background-color: #27292B;
-  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
-  text-align: center;
+  height: 90%;
+  outline: none;
 }
 
-#rendered_math {
-  color: #FFFFFF;
+#typed_math_box {
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  outline: none;
 }
 
-#typed_math, #rendered_math {
+#typed_math, #rendered_math, #typed_math_box {
   font-size: 2rem;
   font-family: 'Space Mono', monospace;
 }

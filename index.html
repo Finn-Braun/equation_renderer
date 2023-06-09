@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <title>Equation Renderer</title>
+    <title>mathify</title>
     <script src="main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+    <script src="https://kit.fontawesome.com/fbe342db89.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id = "header" >
-        <h1 id = "title", data-value = "equation_renderer"  onload = "glitch()" > equation_renderer </h1>
+        <h1 id = "title"> mathify </h1>
     </div>
     <div id = "interface">
         <div id = "input" >
-            <input type="text" id="typed_math" placeholder="type_your_math_here">
+            <p id = "typed_math">x+1</p>
+            <p id = "typed_math_box" contenteditable="true">x+1</p>
         </div>
         <div id = "equation" >
-            <p id="rendered_math"></p>
+            <p id="rendered_math">`x+1`</p>
         </div>
     </div>
     

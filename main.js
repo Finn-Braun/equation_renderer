@@ -1,43 +1,15 @@
 
-const input = document.querySelector("input");
+//declare objects
 const typed_math = document.getElementById("typed_math");
-const math = document.getElementById("rendered_math");
+const typed_math_box = document.getElementById("typed_math_box");
+const rendered_math = document.getElementById("rendered_math");
 
-input.addEventListener("change", updateValue);
+//event listener
+typed_math_box.addEventListener("input", update_value);
 
-function updateValue() {
-  math.innerHTML = "`" + typed_math.value + "`";
-  
+//convert to math
+function update_value() {
+  typed_math.innerHTML = typed_math_box.textContent;
+  rendered_math.innerHTML = "`" + typed_math_box.textContent + "`";
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
-
-const letters = "abcdefghijklmnopqrstuvwxyz";
-
-let interval = null;
-
-document.getElementById("title").onmouseover = event => {  
-  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
-}
-
