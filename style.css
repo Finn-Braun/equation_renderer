@@ -1,9 +1,10 @@
-html, body {
-  background-color:#111111;
-  color: #DF756A;
+html,
+body {
+  background-color: #111111;
+  color: #df756a;
   margin: 0;
   text-align: center;
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: "Spline Sans Mono", monospace;
 }
 
 #title {
@@ -25,32 +26,24 @@ html, body {
   align-content: center;
 }
 
-#input {
-  z-index: 1;
+#input, #equation {
   display: flex;
   width: 35%;
   height: 500px;
   background-color: #111111;
-  border-radius: 20px 10px 10px 20px;
   justify-content: center;
   align-items: center;
   margin: 4px;
-  box-shadow: 10px 10px 50px black
+  box-shadow: 10px 10px 50px black;
 }
 
 #equation {
-  z-index: 1;
-  display: flex;
-  width: 35%;
-  height: 500px;
-  background-color: #111111;
   border-radius: 10px 20px 20px 10px;
-  justify-content: center;
-  align-items: center;
-  margin: 4px;
-  box-shadow: 10px 10px 50px black
 }
 
+#input {
+  border-radius: 20px 10px 10px 20px;
+}
 #typed_math {
   display: flex;
   justify-content: center;
@@ -58,27 +51,22 @@ html, body {
   width: 90%;
   height: 90%;
   outline: none;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-#typed_math_box {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 90%;
-  outline: none;
-}
-
-#typed_math, #rendered_math, #typed_math_box {
+#typed_math,
+#rendered_math {
   font-size: 2rem;
-  font-family: 'Spline Sans Mono', monospace;
+  font-family: "Spline Sans Mono", monospace;
 }
 
 @media screen and (max-width: 700px) {
-  #equation, #input {
+  #equation,
+  #input {
     width: 80%;
     height: 300px;
+    border-radius: 10px
   }
   #title {
     font-size: 2rem;
